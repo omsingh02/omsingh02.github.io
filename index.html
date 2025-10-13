@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om Singh - Full Stack Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="theme-forest">
+    <!-- Navigation -->
+    <nav class="navbar hidden">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="#home" class="brand-link">
+                    <h2>
+                        <span class="letter" style="--i:0">O</span><span class="letter" style="--i:1">M</span><span class="letter space" style="--i:2"> </span><span class="letter" style="--i:3">S</span><span class="letter" style="--i:4">I</span><span class="letter" style="--i:5">N</span><span class="letter" style="--i:6">G</span><span class="letter" style="--i:7">H</span>
+                    </h2>
+                </a>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="nav-menu">
+                <a href="#about" class="nav-link">ABOUT</a>
+                <a href="#projects" class="nav-link">PROJECTS</a>
+            </div>
+            
+            <!-- Theme Controls -->
+            <div class="theme-controls">
+                <div class="theme-switcher">
+                    <button class="theme-btn active" data-theme="forest" title="Forest">
+                        <i class="fas fa-tree"></i>
+                    </button>
+                    <button class="theme-btn" data-theme="ocean" title="Ocean">
+                        <i class="fas fa-water"></i>
+                    </button>
+                    <button class="theme-btn" data-theme="lavender" title="Lavender">
+                        <i class="fas fa-seedling"></i>
+                    </button>
+                    <button class="theme-btn" data-theme="silver" title="Silver">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+                <button class="dark-mode-toggle" title="Toggle Dark Mode">
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <a href="#about" class="mobile-nav-link">ABOUT</a>
+            <a href="#projects" class="mobile-nav-link">PROJECTS</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Page -->
+        <section id="home" class="page">
+            <div class="container hero-section">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">
+                            Hi, I'm <span class="highlight">Om Singh</span>
+                        </h1>
+                        <p class="hero-subtitle">BTech CSE 1st-Year Student</p>
+                        <p class="hero-description">
+                            BTech CSE 1st-Year | C, Java & Web Dev | Bash Automation | FOSS & Privacy Advocate
+                        </p>
+                        
+                        <!-- Stats Cards -->
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-number">19</div>
+                                <div class="stat-label">Age</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">0</div>
+                                <div class="stat-label">Projects</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">5</div>
+                                <div class="stat-label">Technologies</div>
+                            </div>
+                        </div>
+                        
+                        <!-- CTA Buttons -->
+                        <div class="cta-buttons">
+                            <a href="#projects" class="btn btn--primary">
+                                <i class="fas fa-code"></i>
+                                View My Work
+                            </a>
+                            <a href="#about" class="btn btn--secondary">
+                                <i class="fas fa-user"></i>
+                                About Me
+                            </a>
+                        </div>
+                        
+                        <!-- Social Links -->
+                        <div class="social-links">
+                            <a href="https://github.com/omsingh02" target="_blank" class="social-link social-link--github">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/omsingh02" target="_blank" class="social-link social-link--linkedin">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-image">
+                        <div class="profile-card">
+                            <div class="profile-image">
+                                <img src="assets/images/profile.png" alt="Om Singh" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjMTBiOTgxIiBvcGFjaXR5PSIwLjEiLz4KPGNpcmNsZSBjeD0iMTAwIiBjeT0iODAiIHI9IjMwIiBmaWxsPSIjMTBiOTgxIiBvcGFjaXR5PSIwLjMiLz4KPHBhdGggZD0iTTcwIDEzMEM3MCA5MC4xIDk1IDg1IDEwMCA4NUMxMDUgODUgMTMwIDkwLjEgMTMwIDEzMFYxNTBINzBWMTMwWiIgZmlsbD0iIzEwYjk4MSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPgo='">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Page -->
+        <section id="about" class="page">
+            <div class="container">
+                <div class="about-grid">
+                    <!-- Profile Card -->
+                    <div class="about-card profile-card">
+                        <div class="profile-info">
+                            <img src="assets/images/profile.png" alt="Om Singh" class="about-avatar" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjMTBiOTgxIiBvcGFjaXR5PSIwLjEiLz4KPGNpcmNsZSBjeD0iNTAiIGN5PSI0MCIgcj0iMTUiIGZpbGw9IiMxMGI5ODEiIG9wYWNpdHk9IjAuMyIvPgo8cGF0aCBkPSJNMzUgNjVDMzUgNDUuMSA0Ny41IDQyLjUgNTAgNDIuNUM1Mi41IDQyLjUgNjUgNDUuMSA2NSA2NVY3NUgzNVY2NVoiIGZpbGw9IiMxMGI5ODEiIG9wYWNpdHk9IjAuMyIvPgo8L3N2Zz4K'">
+                            <div class="profile-details">
+                                <h2>Om Singh</h2>
+                                <p class="age">19 years old</p>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://linkedin.com/in/omsingh02" target="_blank" class="social-btn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/omsingh02" target="_blank" class="social-btn">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Specialization Card -->
+                    <div class="about-card">
+                        <div class="card-header">
+                            <h3>Specialization</h3>
+                        </div>
+                        <div class="card-body">
+                            <ul class="info-list">
+                                <li>C, Java & Web Development</li>
+                                <li>Bash Scripting & Automation</li>
+                                <li>FOSS & Privacy Advocacy</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Education Card -->
+                    <div class="about-card">
+                        <div class="card-header">
+                            <h3>Education</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="education-section">
+                                <h4>Galgotias University</h4>
+                                <ul class="info-list">
+                                    <li>BTech Computer Science & Engineering - 1st Year</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Technology Stack Card -->
+                    <div class="about-card">
+                        <div class="card-header">
+                            <h3>Technology Stack</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="tech-icons-grid">
+                                <div class="tech-icon">
+                                    <i class="fab fa-java"></i>
+                                </div>
+                                <div class="tech-icon">
+                                    <i class="fab fa-python"></i>
+                                </div>
+                                <div class="tech-icon">
+                                    <i class="fas fa-terminal"></i>
+                                </div>
+                                <div class="tech-icon">
+                                    <i class="fab fa-html5"></i>
+                                </div>
+                                <div class="tech-icon">
+                                    <i class="fab fa-css3-alt"></i>
+                                </div>
+                                <div class="tech-icon">
+                                    <i class="fab fa-js-square"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Languages Card -->
+                    <div class="about-card">
+                        <div class="card-header">
+                            <h3>Languages</h3>
+                        </div>
+                        <div class="card-body">
+                            <ul class="info-list">
+                                <li>
+                                    <span>Hindi - Native</span>
+                                </li>
+                                <li>
+                                    <span>English - Intermediate</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Page -->
+        <section id="projects" class="page">
+            <div class="container">                
+                <div class="projects-container">
+                    <div class="projects-grid" id="projects-grid">
+                        <!-- Projects will be dynamically loaded here -->
+                    </div>
+                    
+                    <div class="empty-projects">
+                        <div class="empty-state">
+                            <i class="fas fa-code-branch"></i>
+                            <h3>No Projects Yet</h3>
+                            <p>I'm currently working on some exciting projects. Check back soon to see what I've been building!</p>
+                            <div class="coming-soon-badge">
+                                <span>Coming Soon</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
