@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Bunny Runner - Cute Endless Adventure! 🐰✨</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Game Container -->
+    <div id="game-container">
+        <!-- Three.js Canvas -->
+        <canvas id="game-canvas"></canvas>
+        
+        <!-- UI Overlay -->
+        <div id="ui-overlay">
+            <!-- Main Menu -->
+            <div id="main-menu" class="screen">
+                <div class="menu-content">
+                    <h1 class="game-title">🐰✨ Bunny Runner ✨🐰</h1>
+                    <p class="game-subtitle">The cutest endless adventure ever! 💕🌸💫</p>
+                    <div class="character-preview">
+                        <div class="bunny-icon">🐰</div>
+                        <div class="sparkles">✨💖✨</div>
+                    </div>
+                    <!-- Difficulty Selection -->
+                    <div class="difficulty-selection">
+                        <h3 class="difficulty-title">Pick your vibe! ✨</h3>
+                        <div class="difficulty-selector">
+                            <button id="difficulty-prev" class="difficulty-arrow" aria-label="Previous difficulty">‹</button>
+                            <div class="difficulty-display">
+                                <div class="difficulty-icon" id="current-difficulty-icon">💕</div>
+                                <div class="difficulty-info">
+                                    <div class="difficulty-name" id="current-difficulty-name">Happy Run</div>
+                                    <div class="difficulty-desc" id="current-difficulty-desc">Balanced fun &amp; challenge!</div>
+                                </div>
+                            </div>
+                            <button id="difficulty-next" class="difficulty-arrow" aria-label="Next difficulty">›</button>
+                        </div>
+                        <div class="recommended-badge" id="recommended-badge">Recommended</div>
+                    </div>
+                    
+                    <button id="start-btn" class="btn btn--primary">
+                        <span>START ADVENTURE</span>
+                        <div class="btn-sparkle">💫</div>
+                    </button>
+                    <div class="best-score-display">
+                        <span>Best Score: </span>
+                        <span id="best-score-menu">0</span>
+                        <span> 🏆</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game HUD -->
+            <div id="game-hud" class="screen hidden">
+                <div class="hud-top">
+                    <div class="score-container">
+                        <div class="score-item">
+                            <span class="score-label">Score</span>
+                            <span id="current-score" class="score-value">0</span>
+                        </div>
+                        <div class="score-item">
+                            <span class="score-label">Best</span>
+                            <span id="best-score" class="score-value">0</span>
+                        </div>
+                        <div class="score-item combo-item" id="combo-display" style="display: none;">
+                            <span class="score-label">Combo</span>
+                            <span id="combo-count" class="score-value">0</span>
+                        </div>
+                    </div>
+                    <div class="hud-controls">
+                        <button id="music-toggle" class="btn btn--icon" title="Mute Music">
+                            🔊
+                        </button>
+                        <button id="pause-btn" class="btn btn--sm">
+                            <span>⏸️ PAUSE</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="controls-hint">
+                    <div class="control-key">← →</div>
+                    <div class="control-text">Move</div>
+                    <div class="control-key">SPACE</div>
+                    <div class="control-text">Jump</div>
+                </div>
+            </div>
+
+            <!-- Pause Menu -->
+            <div id="pause-menu" class="screen hidden">
+                <div class="menu-content">
+                    <h2>Game Paused 🐰💤</h2>
+                    <p>Take a breather, cutie!</p>
+                    <div class="button-group">
+                        <button id="resume-btn" class="btn btn--primary">RESUME</button>
+                        <button id="restart-btn" class="btn btn--secondary">RESTART</button>
+                        <button id="menu-btn" class="btn btn--outline">MAIN MENU</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game Over -->
+            <div id="game-over" class="screen hidden">
+                <div class="menu-content">
+                    <div class="game-over-icon">🌟</div>
+                    <h2 id="game-over-title">You're Awesome!</h2>
+                    <p id="game-over-message">What a cute run, bestie! 💕</p>
+                    
+                    <div class="score-summary">
+                        <div class="final-score">
+                            <span class="score-label">Your Score</span>
+                            <span id="final-score" class="score-big">0</span>
+                        </div>
+                        <div class="best-score-final">
+                            <span class="score-label">Best Score</span>
+                            <span id="best-score-final" class="score-big">0</span>
+                        </div>
+                    </div>
+                    
+                    <div class="celebration" id="celebration">
+                        <div class="confetti">🎉</div>
+                        <div class="confetti">✨</div>
+                        <div class="confetti">💖</div>
+                        <div class="confetti">🌟</div>
+                    </div>
+                    
+                    <div class="button-group">
+                        <button id="play-again-btn" class="btn btn--primary">PLAY AGAIN</button>
+                        <button id="menu-return-btn" class="btn btn--secondary">MAIN MENU</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Touch Controls -->
+        <div id="touch-controls" class="touch-controls hidden">
+            <button id="touch-left" class="touch-btn touch-left" aria-label="Move left">
+                <span>‹</span>
+            </button>
+            <button id="touch-jump" class="touch-btn touch-jump" aria-label="Jump">
+                <span>↑</span>
+            </button>
+            <button id="touch-right" class="touch-btn touch-right" aria-label="Move right">
+                <span>›</span>
+            </button>
+        </div>
+        
+        <!-- Particle Effects Container -->
+        <div id="particles-container"></div>
+        
+        <!-- Loading Screen -->
+        <div id="loading-screen">
+            <div class="loading-content">
+                <div class="loading-bunny">🐰</div>
+                <div class="loading-text">Loading your cute adventure...</div>
+                <div class="loading-bar">
+                    <div class="loading-progress" id="loading-progress"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Audio is now handled by Three.js Audio system -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
